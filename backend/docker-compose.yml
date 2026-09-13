@@ -1,0 +1,17 @@
+services:
+  db:
+    image: postgres:16
+    container_name: lista_casamento_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: lista_casamento
+    ports:
+      - "5432:5432"
+    volumes:
+      - lista_casamento_data:/var/lib/postgresql/data
+      - ./src/db/schema.sql:/docker-entrypoint-initdb.d/schema.sql
+
+volumes:
+  lista_casamento_data:

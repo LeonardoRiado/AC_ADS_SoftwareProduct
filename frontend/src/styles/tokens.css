@@ -1,0 +1,148 @@
+:root {
+  /* Cores */
+  --color-paper: #FBF6EF;
+  --color-paper-dim: #F3ECE0;
+  --color-ink: #26221D;
+  --color-ink-soft: #57504A;
+  --color-forest: #2F3E33;
+  --color-forest-dark: #1D2721;
+  --color-rose: #C97B84;
+  --color-rose-dark: #A85E68;
+  --color-gold: #B8934D;
+  --color-line: #DCD2C0;
+  --color-available: #4A6B52;
+  --color-reserved: #B8934D;
+  --color-bought: #A85E68;
+
+  /* Tipografia */
+  --font-display: 'Fraunces', serif;
+  --font-body: 'Work Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  color: var(--color-forest);
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+input, textarea {
+  font-family: var(--font-body);
+  font-size: 1rem;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-rose);
+  outline-offset: 2px;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.btn-primary {
+  background: var(--color-forest);
+  color: var(--color-paper);
+}
+.btn-primary:hover {
+  background: var(--color-forest-dark);
+}
+.btn-primary:disabled {
+  background: var(--color-line);
+  color: var(--color-ink-soft);
+  cursor: not-allowed;
+}
+
+.btn-rose {
+  background: var(--color-rose);
+  color: var(--color-paper);
+}
+.btn-rose:hover {
+  background: var(--color-rose-dark);
+}
+
+.btn-ghost {
+  background: transparent;
+  border-color: var(--color-line);
+  color: var(--color-ink);
+}
+.btn-ghost:hover {
+  border-color: var(--color-forest);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+.field label {
+  font-size: 0.85rem;
+  color: var(--color-ink-soft);
+}
+.field input,
+.field textarea {
+  padding: 10px 12px;
+  border: 1px solid var(--color-line);
+  border-radius: 4px;
+  background: white;
+  color: var(--color-ink);
+}
+.field input:focus,
+.field textarea:focus {
+  border-color: var(--color-rose);
+}
+
+.error-text {
+  color: var(--color-bought);
+  font-size: 0.9rem;
+}
+
+.status-tag {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 3px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  border: 1px solid currentColor;
+}
+.status-disponivel { color: var(--color-available); }
+.status-reservado { color: var(--color-reserved); }
+.status-comprado { color: var(--color-bought); }
