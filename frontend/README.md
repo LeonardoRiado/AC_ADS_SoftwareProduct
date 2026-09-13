@@ -8,11 +8,11 @@ As seguintes ferramentas foram usadas na construção do projeto:
 * React Router
 
 ✨ Pré-requisitos
-Para rodar o projeto na máquina você precisará do Node.js instalado, além do back-end rodando junto. Além disso, é bom ter um editor instalado para trabalhar como VSCode.
+Para rodar o projeto na máquina você precisará do Node.js instalado, que para rodar o projeto é necessário usar npm install, além do back-end rodando junto. Além disso, é bom ter um editor instalado para trabalhar como VSCode.
 
 🎉 Rodando o projeto
 ```bash
-cp .env.example .env
+cp .env
 npm install
 npm run dev
 ```
